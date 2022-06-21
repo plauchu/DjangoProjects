@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Index page</title>
+  </head>
+  <body>
+      <h1>Calculadora de Pensión para Trabajores Independientes</h1>
+      <p>Ingresa la siguiente información para conocer tu pensión mensual esperada</p>
+    
+    <form action="agrega_trabajador_forma" method="POST">
+      {%csrf_token%}
+      <label> Nombre: <input type="text" name = "nombre"> </label> <br>
+      <label> Edad actual: <input type="text" name = "edadActual"> </label><br>
+      <label> Edad de retiro: <input type="text" name = "edadRetiro"> </label><br>
+      <label> Saldo acumulado en la AFORE: <input type="text" name = "saldoAcumulado"> </label><br>
+      <label> Ahorro mensual esperado: <input type="text" name = "ahorroMensual"> </label><br>
+
+      <label> <input type = "radio" name="genero" value = "hombre" > Hombre </label>
+            <label> <input type = "radio" name="genero" value = "mujer"> Mujer </label>
+            <label> <input type = "radio" name="genero" value = "otro"> Otro </label> <br>
+      
+      <input type = "reset" value = "Limpiar forma"> <br>
+      <input type="submit" value="Agregar">
+    </form>
+      
+  </body>
+</html>

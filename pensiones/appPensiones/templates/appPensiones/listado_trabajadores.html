@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Listado de trabajadores</title>
+  </head>
+  <body>
+    <p>Listado de registros de simulaciones de pensión</p>
+    {% if trabajadores %}
+    <ul>
+    {% for trabajador in trabajadores %}
+      <li> 
+        {{trabajador}}
+    </li>
+    {% endfor %}
+    </ul>
+    {% else %}
+        <p>No hay estudiantes registrados.</p>
+    {% endif %}
+
+  </body>
+</html>

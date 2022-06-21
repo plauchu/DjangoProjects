@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Pagina de registro exitoso</title>
+  </head>
+  <body>
+    <h1>Resultado de la simulación</h1>
+    
+    {% if trabajador %}
+        <p> {{trabajador.nombre}} tendrás una pensión mensual de {{trabajador.getPension}} pesos</p>
+    {% endif %}
+  </body>
+</html>
